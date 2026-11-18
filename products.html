@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>المنتجات | Tech Store</title>
+
+    <link rel="stylesheet" href="products.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                 متجر<span>تقني</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="products.html">المنتجات</a></li>
+                <li><a href="cart.html">السلة 🛒</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="login.html">تسجيل الدخول</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <button id="myOpenSearch" class="search-btn" type="button">
+    🔍
+</button>
+                <button id="darkModeBtn">🌙</button>
+                
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Page Header -->
+
+    <section class="page-header">
+
+        <h1>منتجاتنا</h1>
+
+        <p>
+            اكتشف أحدث الأجهزة والإلكترونيات
+        </p>
+
+    </section>
+
+
+    <!-- Filters -->
+
+    <section class="filters">
+
+        <div class="search-box">
+
+            <label for="searchInput">
+                البحث
+            </label>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="ابحث عن منتج..."
+            >
+
+        </div>
+
+
+        <div class="filter-box">
+
+            <label for="categoryFilter">
+                القسم
+            </label>
+
+            <select id="categoryFilter">
+
+                <option value="all">جميع الأقسام</option>
+
+                <option value="الهواتف">الهواتف</option>
+
+                <option value="اللابتوبات">اللابتوبات</option>
+
+                <option value="السماعات">السماعات</option>
+
+                <option value="الساعات الذكية">الساعات الذكية</option>
+
+                <option value="الكاميرات">الكاميرات</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="filter-box">
+
+            <label for="priceFilter">
+                السعر
+            </label>
+
+            <select id="priceFilter">
+
+                <option value="all">جميع الأسعار</option>
+
+                <option value="low">
+                    أقل من $100
+                </option>
+
+                <option value="medium">
+                    $100 - $500
+                </option>
+
+                <option value="high">
+                    أكثر من $500
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <!-- Products -->
+
+    <main>
+
+        <section class="products-section">
+
+            <div class="products-header">
+
+                <div>
+
+                    <h2>
+                        جميع المنتجات
+                    </h2>
+
+                    <p id="productsCountText">
+                        عدد المنتجات: 0
+                    </p>
+
+                </div>
+
+                <button
+                    id="resetFilters"
+                    class="reset-btn"
+                    type="button"
+                >
+                    إعادة التصفية
+                </button>
+
+            </div>
+
+
+            <div
+                id="productsContainer"
+                class="products-container"
+            ></div>
+
+
+            <div
+                id="noProducts"
+                class="no-products"
+            >
+                لا توجد منتجات مطابقة للبحث.
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Product Details Modal -->
+
+    <div id="productModal" class="modal">
+
+        <div class="modal-content">
+
+            <button
+                id="closeModal"
+                class="close-modal"
+                type="button"
+            >
+                ×
+            </button>
+
+            <img
+                id="modalImage"
+                src=""
+                alt=""
+            >
+
+            <div class="modal-info">
+
+                <span id="modalCategory"></span>
+
+                <h2 id="modalName"></h2>
+
+                <p id="modalDescription"></p>
+
+                <strong id="modalPrice"></strong>
+
+                <button
+                    id="modalCartBtn"
+                    class="cart-btn"
+                    type="button"
+                >
+                    🛒 إضافة إلى السلة
+                </button>
+
+                <a
+                    id="modalDetailsLink"
+                    class="full-details-btn"
+                    href="#"
+                >
+                    عرض التفاصيل الكاملة ←
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Success Message -->
+
+    <div id="successModal" class="success-modal">
+
+        <div class="success-box">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                تمت الإضافة بنجاح
+            </h2>
+
+            <p id="successMessage">
+                تمت إضافة المنتج إلى السلة.
+            </p>
+
+            <button
+                id="successClose"
+                type="button"
+            >
+                حسناً
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Back To Top -->
+
+    <button
+        id="backToTop"
+        type="button"
+        aria-label="العودة للأعلى"
+    >
+        ↑
+    </button>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>
+                    Tech Store
+                </h3>
+
+                <p>
+                    متجرك الإلكتروني للأجهزة والإلكترونيات.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    روابط سريعة
+                </h3>
+
+                <a href="index.html">
+                    الرئيسية
+                </a>
+
+                <a href="products.html">
+                    المنتجات
+                </a>
+
+                <a href="contact.html">
+                    اتصل بنا
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    تواصل معنا
+                </h3>
+
+                <p>
+                    📧 info@techstore.com
+                </p>
+
+                <p>
+                    📞 777000000
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 Tech Store - جميع الحقوق محفوظة
+        </p>
+
+    </footer>
+
+    <div id="mySearchOverlay" class="my-search-overlay">
+
+    <div class="my-search-window">
+
+        <button id="myCloseSearch" class="my-close-search">
+            ✕
+        </button>
+
+        <div class="my-search-icon">🔍</div>
+
+        <h2>ابحث عن منتج</h2>
+
+        <p>اكتب اسم المنتج الذي تبحث عنه</p>
+
+        <input
+            type="text"
+            id="mySearchInput"
+            placeholder="ابحث هنا..."
+        >
+
+        <button id="mySearchButton">
+            🔍 بحث
+        </button>
+
+    </div>
+
+</div>
+
+    <script src="products.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>سلة المشتريات | TechStore</title>
+    <link rel="icon" href="images/m.png">
+
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+
+    <!-- ===============================
+         Navigation
+    ================================ -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                 متجر<span>تقني</span>
+            </div>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">الرئيسية</a>
+                </li>
+
+                <li>
+                    <a href="about.html">من نحن</a>
+                </li>
+
+                <li>
+                    <a href="products.html">المنتجات</a>
+                </li>
+
+                <li>
+                    <a href="cart.html" class="cart-link">
+                        السلة 🛒
+                        <span id="cartCount">0</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">اتصل بنا</a>
+                </li>
+
+                <li>
+                    <a href="login.html">تسجيل الدخول</a>
+                </li>
+
+            </ul>
+
+
+            <div class="nav-buttons">
+                <button id="myOpenSearch" class="search-btn" type="button">
+    🔍
+</button>
+
+                <button id="darkModeBtn">
+                    🌙
+                </button>
+
+                <button id="menuBtn">
+                    ☰
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ===============================
+         Cart
+    ================================ -->
+
+    <main class="container page">
+
+        <div class="page-title">
+
+            <span>
+                مشترياتك
+            </span>
+
+            <h1>
+                سلة المشتريات
+            </h1>
+
+        </div>
+
+
+        <div class="cart-layout">
+
+            <!-- المنتجات -->
+
+            <section>
+
+                <div id="cartItems"></div>
+
+
+                <!-- السلة فارغة -->
+
+                <div id="empty" class="empty">
+
+                    <div>
+                        🛒
+                    </div>
+
+                    <h2>
+                        السلة فارغة
+                    </h2>
+
+                    <p>
+                        أضف بعض المنتجات أولًا.
+                    </p>
+
+                    <a href="products.html">
+                        تصفح المنتجات
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ملخص الطلب -->
+
+            <aside class="summary">
+
+                <h2>
+                    ملخص الطلب
+                </h2>
+
+
+                <div>
+
+                    <span>
+                        عدد المنتجات
+                    </span>
+
+                    <b id="quantity">
+                        0
+                    </b>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        المجموع الفرعي
+                    </span>
+
+                    <b id="subtotal">
+                        $0
+                    </b>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        الشحن
+                    </span>
+
+                    <b id="shipping">
+                        $0
+                    </b>
+
+                </div>
+
+
+                <hr>
+
+
+                <div class="total">
+
+                    <span>
+                        الإجمالي
+                    </span>
+
+                    <b id="total">
+                        $0
+                    </b>
+
+                </div>
+
+
+                <button id="checkout">
+                    إتمام الطلب
+                </button>
+
+
+                <button class="clear" id="clear">
+                    إفراغ السلة
+                </button>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- ===============================
+         رسالة منبثقة
+    ================================ -->
+
+    <div id="cartModal" class="cart-modal">
+
+        <div class="cart-modal-box">
+
+            <button
+                id="closeCartModal"
+                class="cart-modal-close"
+            >
+                ×
+            </button>
+
+
+            <div
+                id="cartModalIcon"
+                class="cart-modal-icon"
+            >
+                ✓
+            </div>
+
+
+            <h2 id="cartModalTitle">
+                تم بنجاح
+            </h2>
+
+
+            <p id="cartModalMessage">
+                تمت العملية بنجاح.
+            </p>
+
+
+            <button
+                id="cartModalButton"
+                class="cart-modal-button"
+            >
+                حسنًا
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===============================
+         Footer
+    ================================ -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <h3>
+                        Tech Store
+                    </h3>
+
+                    <p>
+                        متجرك الإلكتروني للأجهزة والإلكترونيات.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        روابط سريعة
+                    </h3>
+
+                    <a href="index.html">
+                        الرئيسية
+                    </a>
+
+                    <a href="products.html">
+                        المنتجات
+                    </a>
+
+                    <a href="contact.html">
+                        اتصل بنا
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        تواصل معنا
+                    </h3>
+
+                    <p>
+                        📧 info@techstore.com
+                    </p>
+
+                    <p>
+                        📞 777000000
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <p class="copyright">
+                © 2026 Tech Store - جميع الحقوق محفوظة
+            </p>
+
+        </div>
+
+    </footer>
+    <div id="mySearchOverlay" class="my-search-overlay">
+
+    <div class="my-search-window">
+
+        <button id="myCloseSearch" class="my-close-search">
+            ✕
+        </button>
+
+        <div class="my-search-icon">🔍</div>
+
+        <h2>ابحث عن منتج</h2>
+
+        <p>اكتب اسم المنتج الذي تبحث عنه</p>
+
+        <input
+            type="text"
+            id="mySearchInput"
+            placeholder="ابحث هنا..."
+        >
+
+        <button id="mySearchButton">
+            🔍 بحث
+        </button>
+
+    </div>
+
+</div>
+
+
+    <script src="cart.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Store | متجر الإلكترونيات</title>
+  
+<link rel="icon" href="images/m.png">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                متجر<span>تقني</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="products.html">المنتجات</a></li>
+                <li><a href="cart.html">السلة 🛒</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                
+              <li><a href="login.html">تسجيل الدخول</a></li>  
+            </ul>
+
+            <div class="nav-buttons">
+                <button id="myOpenSearch" class="search-btn" type="button">
+    🔍
+</button>
+
+                <button id="darkModeBtn">🌙</button>
+                
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero / Slider -->
+    <section class="hero">
+
+        <div class="slider">
+
+            <img id="sliderImage" src="images/m.png" alt="منتجات إلكترونية">
+
+            <div class="slider-content">
+                <h1 id="sliderTitle">عالمك التقني يبدأ من هنا</h1>
+                <p id="sliderText">
+                    اكتشف أحدث الأجهزة والإلكترونيات بأسعار مميزة.
+                </p>
+
+                <a href="products.html" class="main-btn">
+                    تصفح المنتجات
+                </a>
+            </div>
+
+            <button id="prevBtn" class="slider-btn prev">❮</button>
+            <button id="nextBtn" class="slider-btn next">❯</button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+    <section class="categories">
+
+        <h2>تصفح الأقسام</h2>
+        <p class="section-text">
+            اختر القسم الذي تبحث عنه
+        </p>
+
+        <div class="category-container">
+
+            <div class="category-card" data-category="phones">
+                <div class="category-icon">📱</div>
+                <h3>الهواتف</h3>
+            </div>
+
+            <div class="category-card" data-category="laptops">
+                <div class="category-icon">💻</div>
+                <h3>اللابتوبات</h3>
+            </div>
+
+            <div class="category-card" data-category="headphones">
+                <div class="category-icon">🎧</div>
+                <h3>السماعات</h3>
+            </div>
+
+            <div class="category-card" data-category="cameras">
+                <div class="category-icon">📷</div>
+                <h3>الكاميرات</h3>
+            </div>
+
+            <div class="category-card" data-category="smartwatches">
+                <div class="category-icon">⌚</div>
+                <h3>الساعات الذكية</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Featured Products -->
+    <section class="featured">
+
+        <h2>منتجات مميزة</h2>
+        <p class="section-text">
+            بعض من أفضل منتجات متجرنا
+        </p>
+
+        <div id="featuredProducts" class="products-container">
+            <!-- المنتجات ستظهر بواسطة JavaScript -->
+        </div>
+
+        <a href="products.html" class="main-btn">
+            عرض جميع المنتجات
+        </a>
+
+    </section>
+
+
+    <!-- About Store -->
+    <section class="about-store">
+
+        <div class="about-content">
+
+            <div>
+                <h2>لماذا Tech Store؟</h2>
+
+                <p>
+                    نوفر لك مجموعة متنوعة من الإلكترونيات والأجهزة
+                    الحديثة التي تناسب احتياجاتك اليومية.
+                </p>
+
+                <button id="moreBtn" class="main-btn">
+                    عرض المزيد
+                </button>
+
+                <p id="moreText" class="hidden">
+                    نهتم بتوفير منتجات متنوعة وتجربة استخدام سهلة
+                    وسريعة لجميع زوار المتجر.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Date & Time -->
+    <section class="datetime-section">
+
+        <h2>الوقت والتاريخ</h2>
+
+        <p id="date"></p>
+        <p id="time"></p>
+
+    </section>
+
+
+    <!-- Back To Top -->
+    <button id="topBtn" class="top-btn">
+        ↑
+    </button>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>Tech Store</h3>
+                <p>
+                    متجرك الإلكتروني للأجهزة والإلكترونيات.
+                </p>
+            </div>
+
+            <div>
+                <h3>روابط سريعة</h3>
+                <a href="index.html">الرئيسية</a>
+                <a href="products.html">المنتجات</a>
+                <a href="contact.html">اتصل بنا</a>
+            </div>
+
+            <div>
+                <h3>تواصل معنا</h3>
+                <p>📧 info@techstore.com</p>
+                <p>📞 777000000</p>
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Tech Store - جميع الحقوق محفوظة
+        </p>
+
+    </footer>
+
+<div id="mySearchOverlay" class="my-search-overlay">
+
+    <div class="my-search-window">
+
+        <button id="myCloseSearch" class="my-close-search">
+            ✕
+        </button>
+
+        <div class="my-search-icon">🔍</div>
+
+        <h2>ابحث عن منتج</h2>
+
+        <p>اكتب اسم المنتج الذي تبحث عنه</p>
+
+        <input
+            type="text"
+            id="mySearchInput"
+            placeholder="ابحث هنا..."
+        >
+
+        <button id="mySearchButton">
+            🔍 بحث
+        </button>
+
+    </div>
+
+</div>
+     
+
+    <script src="index.js"></script>
+
+</body>
+</html>
